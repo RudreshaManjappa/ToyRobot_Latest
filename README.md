@@ -59,7 +59,7 @@ MOVE
 
 REPORT
 
-Expected output: 0,1,NORTH
+Expected output: 0,0,NORTH
 
 Example b
 
@@ -87,24 +87,4 @@ REPORT
 
 Expected output: 3,3,NORTH
 
-Setup
 
-Because C# is a compiled language you will need to load this repo in Visual Studio and
-build it. This application was developed Visual Studion 2015 Community.
-
-Clone this repo:
-
-git clone git@github.com:Julzerator/toy-robot-csharp.git
-
-Open the ToyRobot.sln and build Release. The application will be here:
-../ToyRobot/bin/Release
-
-And you're ready to go!
-
-To Use:
-
-Create a .txt file with a series of commands on new lines, such as test.txt
-Save this file in the same directory as the .exe
-In a cmd window, navigate to the directory and type in the following.
-
->ToyRobot test.txt
