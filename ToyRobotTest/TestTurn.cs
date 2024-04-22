@@ -1,0 +1,89 @@
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ToyRobot;
+
+namespace ToyRobotTest
+{
+    [TestClass]
+    public class TestTurn
+    {
+        [TestMethod]
+        public void WhenFacingEastTurnLeft()
+        {
+            var toy = new Robot { direction = "east" };
+
+            toy.TurnLeft();
+
+            Assert.AreEqual("north", toy.direction);
+        }
+
+        [TestMethod]
+        public void WhenFacingEastTurnRight()
+        {
+            var toy = new Robot { direction = "east" };
+
+            toy.TurnRight();
+
+            Assert.AreEqual("south", toy.direction);
+        }
+
+        [TestMethod]
+        public void WhenFacingNorthTurnLeft()
+        {
+            var toy = new Robot { direction = "north" };
+
+            toy.TurnLeft();
+
+            Assert.AreEqual("west", toy.direction);
+        }
+
+        [TestMethod]
+        public void WhenFacingNorthTurnRight()
+        {
+            var toy = new Robot { direction = "north" };
+
+            toy.TurnRight();
+
+            Assert.AreEqual("east", toy.direction);
+        }
+
+        [TestMethod]
+        public void WhenFacingSouthTurnLeft()
+        {
+            var toy = new Robot { direction = "south" };
+
+            toy.TurnLeft();
+
+            Assert.AreEqual("east", toy.direction);
+        }
+
+        [TestMethod]
+        public void WhenFacingSouthTurnRight()
+        {
+            var toy = new Robot { direction = "south" };
+
+            toy.TurnRight();
+
+            Assert.AreEqual("west", toy.direction);
+        }
+
+        [TestMethod]
+        public void WhenFacingWestTurnLeft()
+        {
+            var toy = new Robot { direction = "west" };
+
+            toy.TurnLeft();
+
+            Assert.AreEqual("south", toy.direction);
+        }
+
+        [TestMethod]
+        public void WhenFacingWestTurnRight()
+        {
+            var toy = new Robot { direction = "west" };
+
+            toy.TurnRight();
+
+            Assert.AreEqual("north", toy.direction);
+        }
+    }
+}
